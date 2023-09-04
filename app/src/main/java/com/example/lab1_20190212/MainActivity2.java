@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,20 +27,19 @@ public class MainActivity2 extends AppCompatActivity {
     String palabraSeleccionada = listaDePalabras[indiceAleatorio];
     int intentosRestantes = 6;
 
+    String jugada;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ahorcado);
-        LocalDateTime inicio = LocalDateTime.now();
         Intent intent = getIntent();
-        if (intent != null) {
-            if (intent.hasExtra("clave_valor")) {
-                String valorRecibido;
-                valorRecibido = intent.getStringExtra("clave_valor");
-                TextView textView = findViewById(R.id.textView10);
+        if (intent != null && intent.hasExtra("clave")) {
+            String abc = intent.getStringExtra("clave");
+            jugada = abc;
 
-            }
         }
+        LocalDateTime inicio = LocalDateTime.now();
 
         Button a = findViewById(R.id.buttonA);
         Button b = findViewById(R.id.buttonB);
@@ -67,7 +67,7 @@ public class MainActivity2 extends AppCompatActivity {
         Button x = findViewById(R.id.buttonX);
         Button y = findViewById(R.id.buttonY);
         Button z = findViewById(R.id.buttonZ);
-        Button nuevo = findViewById(R.id.buttonA);
+        Button nuevo = findViewById(R.id.button2);
         TextView t1 = findViewById(R.id.textView4);
         TextView t2 = findViewById(R.id.textView5);
         TextView t3 = findViewById(R.id.textView6);
@@ -120,7 +120,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -137,7 +142,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -272,7 +282,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -287,7 +302,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -377,7 +397,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -511,7 +536,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -527,7 +557,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -549,7 +584,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -617,7 +657,8 @@ public class MainActivity2 extends AppCompatActivity {
                     textView.setText("GG!!!!");
                     inhabilitar();}
             });
-        } else if (palabraSeleccionada.equals("PUCP")) {
+        }
+        else if (palabraSeleccionada.equals("PUCP")) {
             ImageView palito = findViewById(R.id.imageView15);
             palito.setVisibility(View.INVISIBLE);
             ImageView palito1 = findViewById(R.id.imageView11);
@@ -650,7 +691,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -763,7 +809,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -809,7 +860,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -853,7 +909,8 @@ public class MainActivity2 extends AppCompatActivity {
                     textView.setText("GG!!!!");
                     inhabilitar();}
             });
-        } else if (palabraSeleccionada.equals("TELITO")) {
+        }
+        else if (palabraSeleccionada.equals("TELITO")) {
             victo.set(5);
             a.setOnClickListener(view -> {
                 intentosRestantes = intentosRestantes - 1;
@@ -897,7 +954,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -935,7 +997,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -965,7 +1032,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -996,7 +1068,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1044,7 +1121,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1096,7 +1178,8 @@ public class MainActivity2 extends AppCompatActivity {
                     textView.setText("GG!!!!");
                     inhabilitar();}
             });
-        } else if (palabraSeleccionada.equals("TELECO")) {
+        }
+        else if (palabraSeleccionada.equals("TELECO")) {
             victo.set(5);
             a.setOnClickListener(view -> {
                 intentosRestantes = intentosRestantes - 1;
@@ -1124,7 +1207,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1148,7 +1236,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1206,7 +1299,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1236,7 +1334,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1282,7 +1385,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1335,7 +1443,8 @@ public class MainActivity2 extends AppCompatActivity {
                     inhabilitar();}
             });
 
-        } else {
+        }
+        else {
             victo.set(4);
             ImageView palito = findViewById(R.id.imageView15);
             palito.setVisibility(View.INVISIBLE);
@@ -1351,7 +1460,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1365,7 +1479,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1427,7 +1546,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1521,7 +1645,12 @@ public class MainActivity2 extends AppCompatActivity {
                     LocalDateTime fin = LocalDateTime.now();
                     Duration duracion = Duration.between(inicio, fin);
                     long segundosTranscurridos = duracion.getSeconds();
-                    textView.setText("Ganaste / Termino en " + (int) segundosTranscurridos + "s");
+                    TextView textView12 = findViewById(R.id.textView12);
+                    textView12.setVisibility(View.VISIBLE);
+                    TextView textView11 = findViewById(R.id.textView14);
+                    textView11.setVisibility(View.VISIBLE);
+                    textView11.setText(""+(int)segundosTranscurridos+ " ");
+                    textView.setText("Ganaste / Termino en ");
                     inhabilitar();
                 }
             });
@@ -1577,6 +1706,38 @@ public class MainActivity2 extends AppCompatActivity {
         ImageView regreso = findViewById(R.id.imageView16);
         regreso.setOnClickListener(view -> {
             finish();
+        });
+
+        nuevo.setOnClickListener(view ->{
+            Intent intent2 = new Intent(MainActivity2.this, MainActivity2.class);
+            LocalDateTime fin = LocalDateTime.now();
+            Duration duracion = Duration.between(inicio, fin);
+            long segundosTranscurridos = duracion.getSeconds();
+            if(intentosRestantes==0 || victo.get()!=0){
+                jugada = jugada + "-p";
+            }else{
+                String tiempojugado = String.valueOf((int)segundosTranscurridos);
+                jugada = jugada + "-" + tiempojugado;
+            }
+            intent2.putExtra("clave",jugada);
+            startActivity(intent2);
+        });
+
+
+        ImageView estadistica = findViewById(R.id.imageView17);
+        estadistica.setOnClickListener(view ->{
+            Intent intent3 = new Intent(MainActivity2.this, MainActivity3.class);
+            if(intentosRestantes==0 || victo.get()!=0){
+                jugada = jugada + "-p";
+            }
+            else{
+            LocalDateTime fin = LocalDateTime.now();
+            Duration duracion = Duration.between(inicio, fin);
+            long segundosTranscurridos = duracion.getSeconds();
+            String tiempojugado = String.valueOf((int)segundosTranscurridos);
+            jugada = jugada + "-" + tiempojugado;}
+            intent3.putExtra("clave1",jugada);
+            startActivity(intent3);
         });
     }
 
@@ -1657,12 +1818,4 @@ public class MainActivity2 extends AppCompatActivity {
         y.setEnabled(false);
         z.setEnabled(false);
     }
-
-
-
-
-
-
-
-
 }
